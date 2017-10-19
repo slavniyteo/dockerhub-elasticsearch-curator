@@ -1,0 +1,24 @@
+---
+# Remember, leave a key empty if there is no value.  None will be a string,
+# not a Python "NoneType"
+client:
+  hosts: ${CLIENT.HOST:elasticsearch}
+  port: ${CLIENT.PORT:9200}
+  url_prefix: ${CLIENT.URL_PREFIX}
+  use_ssl: ${CLIENT.USE_SSL:False}
+  certificate: |
+    ${CLIENT.CERTIFICATE}
+  client_cert: |
+    ${CLIENT.CLIENT_CERT}
+  client_key: |
+    ${CLIENT.CLIENT_KEY}
+  ssl_no_validate: ${CLIENT.SSL_NO_VALIDATE:False}
+  http_auth: ${CLIENT.HTTP_AUTH}
+  timeout: ${CLIENT.TIMEOUT:30}
+  master_only: ${CLIENT.MASTER_ONLY:False}
+
+logging:
+  loglevel: ${LOGGING.LOGLEVEL:INFO}
+  logfile: ${LOGGING.LOGFILE}
+  logformat: ${LOGGING.LOGFORMAT:default}
+  blacklist: ${LOGGING.BLACKLIST}
