@@ -2,6 +2,11 @@
 
 set -ex
 
+if [ ${LOCAL_ACTION_FILE} ]; then
+  echo ${LOCAL_ACTION_FILE} > action_file.yml
+fi
+exit 1
+
 # Add curator as command if needed
 if [ "$(echo $1 | cut -c1-1)" = '-' ]; then
   set -- curator "$@"
