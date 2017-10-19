@@ -13,6 +13,7 @@ Every 24 hours it will remove all indexes older than 183 days (half of year).
 You can cofigure job with next environment variables:
 
 | ENV | Default value | Description |
+|-----|---------------|-------------|
 | INTERVAL_IN_HOURS | 24 | Start job period |
 | OLDER_THAN_IN_DAYS | 183 | Indeces age theshold |
 | CLIENT.HOST | elasticsearch | Elasticsearch host |
